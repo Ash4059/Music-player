@@ -1,0 +1,237 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --theme-background-color: #2a2747;
+    --text-white-color: #FFF;
+}
+
+body
+{
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100vh;
+    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+}
+
+/* ---- General styling ----- */
+
+.no-list-style
+{
+    list-style: none;
+}
+
+.horizontal-list li
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.float-left
+{
+    float: left;
+}
+
+.float-right
+{
+    float: right;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+input
+{
+    border: 1px solid var(--text-white-color);
+}
+
+input:focus,textarea:focus{
+    outline: none;
+}
+
+.display-flex
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.color-red
+{
+    color: red !important;
+}
+
+/* ----- Navbar ----- */
+
+.navbar
+{
+    width: 100%;
+    height: 48px;
+}
+
+.nav-content
+{
+    display: flex;
+    align-items: center;
+}
+
+.nav-content > li:not(:last-child)
+{
+    margin: 0px 10px;
+}
+
+.horizontal-list li *
+{
+    text-decoration: none;
+    color: var(--text-white-color);
+}
+
+.logo-icons
+{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.home-link
+{
+    display: flex;
+}
+
+.home-link-font
+{
+    width: 64px;
+    padding-left: 8px;
+    font-size: 20px;
+}
+
+/* .favrouites
+{
+    margin-left: 40px;
+} */
+
+.profile-icon img
+{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+}
+
+.alert-icon
+{
+    padding-top: 10px !important;
+    margin: 0px 20px !important;
+}
+
+.alert-dot
+{
+    position: relative;
+    width: 8px;
+    height: 8px;
+    left: 8px;
+    top: -11px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.search-icon, .microphone-icon
+{
+    position: relative;
+    fill: lightgray;
+    width: 14px;
+    height: 14px;
+    top: 3px;
+}
+
+.search-icon
+{
+    left: 22px;
+}
+
+.microphone-icon
+{
+    left: -20px;
+}
+
+.input-search
+{
+    width: 180px;
+    height: 22px;
+    padding-left: 24px;
+    background-color: transparent;
+}
+
+.dropdown-menu
+{
+    display: none;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #403066;
+    box-shadow: 0px 4px 8px 1px #2857a4;
+    transition: all ease-in-out 1s;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+.dropdown-list ul li
+{
+    display: block;
+    width: 100%;
+}
+
+.dropdown-list ul li:not(:last-child)
+{
+    border-bottom: 1px solid #FFF;
+    height: 46px;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 4px;
+}
+
+.dropdown-list .searchbar
+{
+    margin: 10px 0px;
+}
+
+@media screen and (max-width: 548px) {
+    .nav-content
+    {
+        display: none;
+    }
+
+    .dropdown-menu
+    {
+        display: inline-block;
+    }
+
+    .bars
+    {
+        fill: var(--text-white-color);
+        width: 20px;
+        height: 20px;
+        margin: 9px;
+    }
+}
