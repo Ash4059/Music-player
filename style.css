@@ -221,10 +221,9 @@ input:focus,textarea:focus{
 }
 
 /* ---- Main content ---- */
-
 .container
 {
-    flex: 2 1;
+    margin-top: 48px;
 }
 
 .main-container, .side-container
@@ -233,9 +232,18 @@ input:focus,textarea:focus{
     border: 1px solid black;
 }
 
+.main-container
+{
+    flex: 2.5;
+}
+
+.side-container
+{
+    flex: 1;
+}
 /* ---- Media Query ---- */
 
-@media screen and (max-width: 548px) {
+@media screen and (max-width: 556px) {
     .nav-content
     {
         display: none;
