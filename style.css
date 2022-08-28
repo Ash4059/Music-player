@@ -69,11 +69,15 @@ input:focus,textarea:focus{
     color: red !important;
 }
 
+.width-100
+{
+    width: 100%;
+}
+
 /* ----- Navbar ----- */
 
 .navbar
 {
-    width: 100%;
     height: 48px;
 }
 
@@ -215,6 +219,21 @@ input:focus,textarea:focus{
 {
     margin: 10px 0px;
 }
+
+/* ---- Main content ---- */
+
+.container
+{
+    flex: 2 1;
+}
+
+.main-container, .side-container
+{
+    height: 100%;
+    border: 1px solid black;
+}
+
+/* ---- Media Query ---- */
 
 @media screen and (max-width: 548px) {
     .nav-content
