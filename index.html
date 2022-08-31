@@ -31,6 +31,9 @@
                 <li class="favrouites">
                     <a href="#">Favrouites</a>
                 </li>
+                <li class="Playlist">
+                    <a href="#">Playlist</a>
+                </li>
                 <li class="alert-icon cursor-pointer">
                     <i class="fa-solid fa-bell"></i>
                     <div class="alert-dot"></div>
@@ -64,7 +67,12 @@
                             <a href="#">Favrouites</a>
                             <i class="fa-solid fa-heart color-red"></i>
                         </div>
-                        
+                    </li>
+                    <li class="Playlist">
+                        <div class="display-flex">
+                            <a href="#">Playlist</a>
+                            <i class="fa-solid fa-circle-play"></i>
+                        </div>
                     </li>
                     <li class="searchbar">
                         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>
@@ -75,12 +83,41 @@
             </div>
         </div>
     </nav>
+
+    <!-- Main container -->
+
     <div class="container display-flex width-100">
         <div class="main-container width-100">
-            <h2>Trending songs</h2>
+            <h2 class="trending-songs-header color-white">Top Trending Songs</h2>
+            <div class="trending-song">
+                <a class="trending-song-links" href="#">
+                    <img src="./images/dare-you.png" alt="dare-you">
+                    <div class="trending-song-details">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <p class="song-name">Dare you</p>
+                        <p class="singer"> - Langotia brothers</p>
+                    </div>
+                </a>
+                <a class="trending-song-links" href="#">
+                    <img src="./images/lot-of-plan.jpg" alt="lot-of-plan">
+                    <div class="trending-song-details">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <p class="song-name">We may make a lot of plans</p>
+                        <p class="singer"> - Neeraj Gupta</p>
+                    </div>
+                </a>
+                <a class="trending-song-links" href="#">
+                    <img src="./images/right-path-is-not-easy.jpg" alt="right-path-is-not-easy">
+                    <div class="trending-song-details">
+                        <div class="play"><i class="fa-solid fa-play"></i></div>
+                        <p class="song-name">Sometimes right path</p>
+                        <p class="singer"> - Pritam Das</p>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="side-container width-100">
-
+            <h2 class="playlist-header color-white">Playlist</h2>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/4d8300c4f4.js" crossorigin="anonymous"></script>

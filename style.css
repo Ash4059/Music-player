@@ -17,6 +17,7 @@ body
     margin: 0 auto;
     height: 100vh;
     background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+    min-width: 300px;
 }
 
 /* ---- General styling ----- */
@@ -74,6 +75,11 @@ input:focus,textarea:focus{
     width: 100%;
 }
 
+.color-white
+{
+    color: var(--text-white-color);
+}
+
 /* ----- Navbar ----- */
 
 .navbar
@@ -117,17 +123,12 @@ input:focus,textarea:focus{
     font-size: 20px;
 }
 
-/* .favrouites
-{
-    margin-left: 40px;
-} */
-
 .profile-icon img
 {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    border: 1px solid #FFF;
+    border: 1px solid var(--text-white-color);
 }
 
 .alert-icon
@@ -184,7 +185,7 @@ input:focus,textarea:focus{
     display: none;
     background-color: #403066;
     box-shadow: 0px 4px 8px 1px #2857a4;
-    transition: all ease-in-out 1s;
+    z-index: 2;
 }
 
 .dropdown-list ul{
@@ -205,7 +206,7 @@ input:focus,textarea:focus{
 
 .dropdown-list ul li:not(:last-child)
 {
-    border-bottom: 1px solid #FFF;
+    border-bottom: 1px solid var(--text-white-color);
     height: 46px;
 }
 
@@ -241,9 +242,86 @@ input:focus,textarea:focus{
 {
     flex: 1;
 }
+
+.trending-songs-header
+{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 32px;
+}
+
+.trending-song
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trending-song-links
+{
+    max-width: 175px;
+    max-height: 175px;
+    overflow: hidden;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all ease-in-out 0.2s;
+}
+
+.trending-song-links:hover
+{
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+.trending-song-links:hover .trending-song-details
+{
+    background-color: #80808099;
+    color: var(--text-white-color);
+    font-size: 18px;
+}
+
+.trending-song a img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
+.trending-song-details
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.play
+{
+    margin: 10px;
+}
+
+.song-name
+{
+    margin: 0px 10px;
+}
+
+.singer
+{
+    text-align: end;
+}
+
 /* ---- Media Query ---- */
 
-@media screen and (max-width: 556px) {
+@media screen and (max-width: 640px) {
     .nav-content
     {
         display: none;
