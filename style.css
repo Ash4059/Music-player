@@ -7,17 +7,22 @@
 
 :root
 {
-    --theme-background-color: #2a2747;
+    --theme-purple-color: #2a2747;
     --text-white-color: #FFF;
+    --text-red-color: #FF0000;
+    --text-black-color: #000;
+    --theme-blue-color: #2857a4;
 }
 
 body
 {
-    max-width: 1080px;
+    max-width: 1260px;
     margin: 0 auto;
-    height: 100vh;
-    background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+    height: calc(100vh - 82px);
+    background-image: linear-gradient(50deg, var(--theme-blue-color) 0%, var(--theme-purple-color) 74%);
     min-width: 300px;
+    overflow: hidden;
+    width: 100vw;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -78,7 +83,7 @@ input:focus,textarea:focus{
 
 .color-red
 {
-    color: red !important;
+    color: var(--text-red-color) !important;
 }
 
 .width-100
@@ -101,6 +106,12 @@ input:focus,textarea:focus{
 .navbar
 {
     height: 48px;
+    position: fixed;
+    top: 0px;
+    max-width: 1280px;
+    z-index: 4;
+    background-image: linear-gradient(146deg, #31478b 0%, var(--theme-purple-color) 74%);
+    border-radius: 24px;
 }
 
 .nav-content
@@ -160,7 +171,7 @@ input:focus,textarea:focus{
     height: 8px;
     left: 8px;
     top: -11px;
-    background-color: red;
+    background-color: var(--text-red-color);
     border-radius: 50%;
 }
 
@@ -240,13 +251,13 @@ input:focus,textarea:focus{
 /* ---- Main content ---- */
 .container
 {
-    margin-top: 48px;
+    margin-top: 80px;
 }
 
 .main-container, .side-container
 {
     height: 100%;
-    border: 1px solid black;
+    overflow: scroll;
 }
 
 .main-container
@@ -275,8 +286,8 @@ input:focus,textarea:focus{
 
 .trending-song-links
 {
-    max-width: 175px;
-    max-height: 175px;
+    max-width: 200px;
+    max-height: 200px;
     overflow: hidden;
     margin: 10px;
     background-size: cover;
@@ -344,19 +355,49 @@ input:focus,textarea:focus{
 .playlist-menu-dropdown
 {
     float: right;
+    display: flex;
+    flex-direction: column;
 }
 
-.playlist-menu-dropdown input
+.playlist-menu-content
 {
-    display: none;
-}
-
-#playlist-dropdown:checked + .playlist-menu-dropdown::before
-{
-    content: "Hi";
+    background-color: var(--text-white-color);
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 116px;
+    right: calc((100% - 1256px)/2);
+}
+
+.playlist-menu-content li
+{
+    list-style: none;
+    margin: 12px;
+    padding: 6px;
+    border-bottom: 1px solid var(--theme-purple-color);
+}
+
+.playlist-menu-content li:hover
+{
+    box-shadow: 0px 6px 6px 0px var(--theme-purple-color);
+}
+
+.playlist-menu-content a, .watchlist-songs a
+{
+    text-decoration: none;
+    color: var(--text-black-color);
+}
+
+#show-playlist-dropdown
+{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+#show-playlist-dropdown:target
+{
+    width: auto;
+    height: auto;
+    opacity: 1;
 }
 
 .playlist-songs-container
@@ -381,7 +422,7 @@ input:focus,textarea:focus{
 
 .playlist-song:hover
 {
-    box-shadow: 0px 0px 11px 1px #2857a4;
+    box-shadow: 0px 0px 11px 1px var(--theme-blue-color);
 }
 
 .playlist-song img
@@ -416,37 +457,33 @@ input:focus,textarea:focus{
     width: 20px;
     height: 20px;
     fill: var(--text-white-color);
-    color: white;
+    color: var(--text-white-color);
 }
 
 .add-to-favrouite:hover
 {
-    color: red;
+    color: var(--text-red-color);
 }
 
 .add-to-hatelist:hover
 {
-    fill: #000;
+    fill: var(--text-black-color);
 }
 
-/* ---- Media Query ---- */
+.watchlist-songs
+{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 80px;
+    font-size: 18px;
+    background-color: var(--text-white-color);
+    color: var(--text-black-color);
+    box-shadow: 0px 4px 8px 1px var(--text-black-color);
+}
 
-@media screen and (max-width: 640px) {
-    .nav-content
-    {
-        display: none;
-    }
-
-    .dropdown-menu
-    {
-        display: inline-block;
-    }
-
-    .bars
-    {
-        fill: var(--text-white-color);
-        width: 20px;
-        height: 20px;
-        margin: 9px;
-    }
+.responsive-playlist-container
+{
+    display: none;
 }

@@ -1,0 +1,61 @@
+/* ---- For navbar ---- */
+@media screen and (max-width: 640px) {
+    .nav-content, .side-container
+    {
+        display: none;
+    }
+
+    .dropdown-menu, .watchlist-songs
+    {
+        display: inline-block;
+    }
+
+    .bars
+    {
+        fill: var(--text-white-color);
+        width: 20px;
+        height: 20px;
+        margin: 9px;
+    }
+
+    .watchlist-songs:hover .responsive-playlist-container
+    {
+        display: inline-block;
+        width: 300px !important;
+        position: absolute;
+        right: 2px;
+        top: 21px;
+        height: 400px !important;
+        background-image: linear-gradient(146deg, #31478b 0%, var(--theme-purple-color) 74%);
+        overflow: scroll;
+        box-shadow: 0px 4px 8px 1px #2857a4;
+    }
+
+    .responsive-playlist-container .playlist-menu-dropdown a
+    {
+        color: var(--text-white-color);
+    }
+}
+
+/* ---- For playlist dropdown ----- */
+
+@media screen and (max-width: 1280px) {
+    .playlist-menu-content
+    {
+        right: 4px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main-container
+    {
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-container
+    {
+        flex: 1.5;
+    }
+}
