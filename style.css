@@ -434,7 +434,12 @@ input:focus,textarea:focus{
     margin-top: 30px;
 }
 
-#release-songs-menu
+#release-songs-menu,
+#release-songs-menu1,
+#release-songs-menu2,
+#release-songs-menu3,
+#release-songs-menu4,
+#release-songs-menu5
 {
     width: 0px;
     height: 0px;
@@ -443,10 +448,7 @@ input:focus,textarea:focus{
 
 .music-studio-menu 
 {
-    position: absolute;
     width: 200px;
-    top: 20px;
-    right: 0px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -465,9 +467,17 @@ input:focus,textarea:focus{
     border-bottom: 2px solid var(--theme-purple-color);
 }
 
-input#release-songs-menu:checked + .music-studio-menu
+input#release-songs-menu:checked + .music-studio-menu,
+input#release-songs-menu1:checked + .music-studio-menu,
+input#release-songs-menu2:checked + .music-studio-menu,
+input#release-songs-menu3:checked + .music-studio-menu,
+input#release-songs-menu4:checked + .music-studio-menu,
+input#release-songs-menu5:checked + .music-studio-menu
 {
+    position: absolute;
     display: flex;
+    top: 20px;
+    right: 0px;
 }
 
 /* ---- Playlist ---- */
