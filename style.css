@@ -12,6 +12,7 @@
     --text-red-color: #FF0000;
     --text-black-color: #000;
     --theme-blue-color: #2857a4;
+    --text-transparent-color: #80808099;
 }
 
 body
@@ -277,7 +278,7 @@ input:focus,textarea:focus{
     font-size: 32px;
 }
 
-.trending-song, .latest-release-songs
+.cards
 {
     display: flex;
     flex-wrap: wrap;
@@ -303,9 +304,11 @@ input:focus,textarea:focus{
     z-index: 2;
 }
 
-.trending-song-links:hover .trending-song-details, .song-image:hover .play-pause
+.trending-song-links:hover .trending-song-details,
+.song-image:hover .play-pause,
+.artist-container:hover .artist-description
 {
-    background-color: #80808099;
+    background-color: var(--text-transparent-color);
     color: var(--text-white-color);
     font-size: 18px;
 }
@@ -349,7 +352,7 @@ input:focus,textarea:focus{
 
 /* ---- Latest release ----- */
 
-.latest-release-header
+.latest-release-header, .popular-artist-header
 {
     margin-bottom: 12px;
 }
@@ -478,6 +481,46 @@ input#release-songs-menu5:checked + .music-studio-menu
     display: flex;
     top: 20px;
     right: 0px;
+}
+
+/* ---- Artist ---- */
+
+.artist-container
+{
+    position: relative;
+    margin: 20px;
+}
+
+.artist-container img
+{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.artist-container:hover .artist-description
+{
+    display: flex;
+}
+
+.artist-description
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.artist-description i
+{
+    margin: 12px;
 }
 
 /* ---- Playlist ---- */
