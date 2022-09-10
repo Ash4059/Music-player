@@ -352,7 +352,7 @@ input:focus,textarea:focus{
 
 /* ---- Latest release ----- */
 
-.latest-release-header, .popular-artist-header
+.latest-release-header, .popular-artist-header, .Latest-english-header
 {
     margin-bottom: 12px;
 }
@@ -527,7 +527,7 @@ input#release-songs-menu5:checked + .music-studio-menu
 
 .music-station-card
 {
-    width: 100%;
+    width: 98%;
     height: auto;
     background: linear-gradient( 90deg, var(--theme-purple-color), var(--text-red-color), var(--theme-blue-color) );
     justify-content: space-around !important;
@@ -600,12 +600,13 @@ input#release-songs-menu5:checked + .music-studio-menu
 
 .music-mood-container img
 {
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+    transform: scale(1);
 }
 
-.music-mood-container p
+.music-mood-container p, .music-type p
 {
     position: relative;
     text-align: center;
@@ -621,6 +622,76 @@ input#release-songs-menu5:checked + .music-studio-menu
 .music-mood-container p:hover
 {
     background-image: none;
+}
+
+.music-type
+{
+    margin: 20px;
+    width: 180px;
+    height: 180px;
+    font-size: 22px;
+    color: var(--text-white-color);
+    transition: all ease-in-out 0.2s;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.music-type p
+{
+    top: 0px;
+    background-size: cover;
+    transition: all ease-in-out 0.2s;
+}
+
+.music-type:hover p
+{
+    transform: scale(1.5);
+}
+
+.music-type:hover p span
+{
+    transform: scale(0.66);
+}
+
+.music-type .electronic-music
+{
+    background-image: url(./images/music-type/electronic.jpg);
+}
+
+.music-type .party-music
+{
+    background-image: url(./images/music-type/party.jpg);
+}
+
+.music-type .travel-music
+{
+    background-image: url(./images/music-type/travel.jpg);
+}
+
+/* ---- Latest song container ---- */
+
+.latest-songs-container
+{
+    width: 220px;
+    height: 228px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+}
+
+.latest-songs-container img
+{
+    width: 180px;
+    height: 180px;
+}
+
+.latest-songs-container:hover
+{
+    box-shadow: 0px 0px 11px 1px #981222;
+    outline: 2px solid var(--text-white-color);
 }
 
 /* ---- Playlist ---- */
