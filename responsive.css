@@ -51,6 +51,16 @@
     {
         flex: 2;
     }
+
+    .music-station-card
+    {
+        flex-direction: column;
+    }
+
+    .music-mood
+    {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 800px) {

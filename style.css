@@ -523,6 +523,106 @@ input#release-songs-menu5:checked + .music-studio-menu
     margin: 12px;
 }
 
+/* ---- Music-station-card ---- */
+
+.music-station-card
+{
+    width: 100%;
+    height: auto;
+    background: linear-gradient( 90deg, var(--theme-purple-color), var(--text-red-color), var(--theme-blue-color) );
+    justify-content: space-around !important;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.station-icon-cards
+{
+    position: relative;
+    width: 210px;
+    height: 210px;
+}
+
+.station-icon-cards #div1
+{
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    width: 180px;
+    height: 120px;
+    background-color: yellow;
+}
+
+.station-icon-cards #div2
+{
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(153, 205, 50);
+}
+
+.station-icon-cards #div3
+{
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    width: 120px;
+    height: 180px;
+    background-color: rgb(25, 168, 9);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-white-color);
+}
+
+.music-mood
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: calc(100% - 210px);
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.music-mood-container
+{
+    margin: 10px;
+    width: 120px;
+    height: 120px;
+    font-size: 22px;
+    color: var(--text-white-color);
+}
+
+.music-mood-container img
+{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.music-mood-container p
+{
+    position: relative;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -125px;
+    border-radius: 50%;
+    background-image: linear-gradient( 0deg, #c9c8b9 -66%, #00000000 );
+}
+
+.music-mood-container p:hover
+{
+    background-image: none;
+}
+
 /* ---- Playlist ---- */
 .side-container-header
 {
