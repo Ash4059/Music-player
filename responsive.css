@@ -1,6 +1,6 @@
 /* ---- For navbar ---- */
 @media screen and (max-width: 640px) {
-    .nav-content, .side-container
+    .nav-content, .side-container, .controls div:nth-child(-n+2), .controls div:nth-last-child(-n+2)
     {
         display: none;
     }
@@ -35,6 +35,11 @@
     {
         color: var(--text-white-color);
     }
+
+    .controls
+    {
+        justify-content: space-evenly;
+    }
 }
 
 /* ---- For playlist dropdown ----- */
@@ -67,5 +72,17 @@
     .main-container
     {
         flex: 1.5;
+    }
+
+    /* ---- For Audio player ---- */
+
+    .extras div:nth-child(-n+2), .extras div:last-child, .song-desc
+    {
+        display: none;
+    }
+
+    .extras .slidecontainer
+    {
+        width: 70% !important;
     }
 }
