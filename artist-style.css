@@ -177,6 +177,17 @@
 {
     height: 260px;
     overflow: scroll;
+    margin-bottom: 26px;
+}
+
+.similar-artists:nth-child(2)
+{
+    height: 300px;
+}
+
+.similar-artists .playlist-songs-container, .similar-artists .side-container-header
+{
+    margin-top: 1vh;
 }
 
 .Similiar-Artist
@@ -197,4 +208,11 @@
 .Similiar-Artist .playlist-description
 {
     width: auto;
+}
+
+/* ---- Recently Played ---- */
+
+.recently-played .accordion
+{
+    margin: 8px auto !important;
 }
