@@ -170,3 +170,31 @@
 {
     color: var(--text-red-color);
 }
+
+/* ---- Similiar-Artist ---- */
+
+.similar-artists
+{
+    height: 260px;
+    overflow: scroll;
+}
+
+.Similiar-Artist
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Similiar-Artist .left-content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.Similiar-Artist .playlist-description
+{
+    width: auto;
+}

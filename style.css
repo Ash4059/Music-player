@@ -764,7 +764,7 @@ input#release-songs-menu5:checked + .music-studio-menu
     margin-bottom: 76px;
 }
 
-.playlist-song
+.playlist-song, .Similiar-Artist
 {
     width: 90%;
     height: auto;
@@ -774,12 +774,12 @@ input#release-songs-menu5:checked + .music-studio-menu
     border: 2px solid transparent;
 }
 
-.playlist-song:hover
+.playlist-song:hover, .Similiar-Artist:hover
 {
     box-shadow: 0px 0px 11px 1px var(--theme-blue-color);
 }
 
-.playlist-song img
+.playlist-song img, .Similiar-Artist img
 {
     width: 80px;
     height: 80px;
