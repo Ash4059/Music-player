@@ -286,7 +286,7 @@ input:focus,textarea:focus{
     margin-bottom: 32px;
 }
 
-.cards:last-child
+.cards:last-child, .accordion:last-child
 {
     margin-bottom: 76px;
 }
