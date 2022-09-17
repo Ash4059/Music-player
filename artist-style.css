@@ -182,7 +182,7 @@
 
 .similar-artists:nth-child(2)
 {
-    height: 300px;
+    height: calc(100% - 363px);
 }
 
 .similar-artists .playlist-songs-container, .similar-artists .side-container-header
